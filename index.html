@@ -5,21 +5,50 @@
 <head>
     <meta charset=utf-8>
     <title>API Hack App</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link rel="stylesheet" href="
+https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" type="text/css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>    
 
 
 </head>
 
-    <body ng-controller="jediController as jCtrl">
+    <body style="background-color: black ); ng-controller="jediController as jCtrl">
         
-       {{ jCtrl.jedi.eye_color }}
+    <div class="container">
+    <div class ="row">
+    <div class="col-xs-12">
+    <h1 style="color: gold; text-align: center">In a galaxy far far away</h1>
+    </div>
+    </div>
+        <div class="row">
+            <div class="col-xs-4" class="feather"><img src="images/alderaan1.jpg"></div>
+            <div class="col-xs-4"><img src="images/naboo1.jpg"></div>
+            <div class="col-xs-4"><img src="images/tattoine.jpg"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3" id="talkbox">
+            <ul ng-repeat="j in jCtrl.jedi | orderBy: birth_year">
+                  <li>Name: {{ j.name }}</li>
+                    <li>Birth Year: {{ j. }}</li>
+                      <li>Eyes color: {{ j.}}</li>
+                      <li>Skin color: {{ j.}}</li>
+                      <li>Homeworld: {{ j. }}</li>
+        </ul>
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
         
         <ul ng-repeat="j in jCtrl.jedi | orderBy: birth_year">
           <li>Name: {{ j.name }}</li>
-          <li>Birth Year: {{ j.birth_year }}</li>
-          <li>Eyes color: {{ j.eye_color}}</li>
-          <li>Skin color: {{ j.skin_color}}</li>
-          <li>Homeworld: {{ j.homeworld }}</li>
+          <li>Birth Year: {{ j. }}</li>
+          <li>Eyes color: {{ j.}}</li>
+          <li>Skin color: {{ j.}}</li>
+          <li>Homeworld: {{ j. }}</li>
         </ul>
                 
         
